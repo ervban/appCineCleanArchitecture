@@ -1,0 +1,69 @@
+.peliculas {
+
+  top: 40%;
+  background-color: black;
+  display: flex; /* Cambiado de block a flex para alinear elementos horizontalmente */
+  flex-direction: column; /* Organiza los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  width: auto;
+  height: auto; /* Cambiado de 500px a auto para ajustar la altura según el contenido */
+  padding-top: 20px; /* Ajustado para reducir el espacio superior */
+  padding-bottom: 20px; /* Ajustado para reducir el espacio inferior */
+}
+
+
+.image-group {
+  display: flex !important; /* Cambia a flex o cualquier otro valor deseado */
+  unicode-bidi: normal !important; /* Cambia a normal o cualquier otro valor deseado */
+}
+.container-peliculas {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Asegura que los elementos se distribuyan uniformemente */
+  gap: 10px; /* Ajusta el espacio entre elementos */
+}
+
+.image-container {
+  width: 200px; /* Ajusta el ancho de cada contenedor de imagen */
+  height: auto; /* Altura automática para mantener la proporción de las imágenes */
+  position: relative; /* Mantiene la posición relativa para el posicionamiento de los botones */
+  margin-bottom: 20px; /* Añade un margen inferior para separar los elementos verticalmente */
+}
+
+.image-container img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+.buy-ticket-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .buy-ticket-button {
+  opacity: 1;
+}
+
+.image-container:hover img {
+  filter: blur(3px);
+}
+
+.peliculas h2 {
+  color: white;
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  margin-bottom: 20px; /* Añade un margen inferior para separar el título de los elementos */
+}

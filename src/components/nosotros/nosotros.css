@@ -1,0 +1,43 @@
+.about-us {
+    font-family: "Roboto", sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    height: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .about-us h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .about-us img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenedor principal tenga al menos la altura de la ventana gráfica */
+  }
+  
+  .content-wrap {
+    flex: 1; /* Asegura que el contenido principal ocupe todo el espacio disponible, empujando el footer hacia abajo */
+  }
+  
+  

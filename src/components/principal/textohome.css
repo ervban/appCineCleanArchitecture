@@ -1,0 +1,27 @@
+.texto {
+  position: relative;
+  text-align: center;
+  margin-top: 15%;
+  color: white;
+}
+
+.textoCentral {
+  position: relative; /* Cambiado a relativo para que se base en su posición actual, que ya está centrada por .texto */
+  text-align: center;
+  color: white;
+}
+
+.texto h1,
+.texto h3,
+.textoCentral h1,
+.textoCentral h3 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.texto h3,
+.textoCentral h3 {
+  margin-top: 20px;
+}
