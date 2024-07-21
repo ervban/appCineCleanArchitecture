@@ -39,9 +39,12 @@ const App = () => {
                   <Routes>
                     <Route path="/home" element={<Home />} />
                     <Route path="/horario" element={<Horarios />} />
-                    <Route path="/asientos" element={<Asientos />} />
+                    <Route path="/horario/:id" element={<Horarios />} />
+                    <Route path="/asientos" element={<Asientos movieId={0} id_pelicula={0} />} />
+                    <Route path="/asientos/:id" element={<Asientos movieId={0} id_pelicula={0} />} />
                     <Route path="/snacks" element={<Snacks />} />
                     <Route path="/pago" element={<Pago />} />
+                    <Route path="/pago/:id" element={<Pago />} />
                     <Route path="/confirmacion" element={<Confirmacion />} />
                     <Route path="/logIn" element={<Login />} />
                     <Route path="/registro" element={<RegistroUsuarios />} />
@@ -50,6 +53,8 @@ const App = () => {
                     <Route path="/sedes" element={<Sedes />} />
                     <Route path="/nosotros" element={<Nosotros />} />
                     <Route path='/snackCompra' element={<SnackCompra />} />
+                    
+
                   </Routes>
                 </BrowserRouter>
               </Provider>

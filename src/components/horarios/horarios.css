@@ -10,15 +10,18 @@
 }
 .cuadroIzquierdo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
     height: 100%;
     align-items: center;
 
 }
 .cuadroIzquierdo img{
-    width: 300px;
-    height: 400px;
+    width: 310px;
+    height: 447px;
+    -webkit-box-shadow: -9px 10px 10px 1px rgba(230,230,230,0.83);
+-moz-box-shadow: -9px 10px 10px 1px rgba(230,230,230,0.83);
+box-shadow: -9px 10px 10px 1px rgba(230,230,230,0.83);
 }
 
 
@@ -32,128 +35,83 @@
     height: 100%;
 
 }
-.texto {
-    width: 100%;
+.textoInformacionPelicula {
+    max-width: 60%;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
 }
 
-.texto h1{
-    color: red;
+.textoInformacionPelicula div{
+  background-color: #F6F6F6;
 }
-.texto p{
-    margin-right: 30%;
-    color: white;
-    background-color: black;
-    border: 40px solid black;
+
+.textoInformacionPelicula h1{
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+.textoInformacionPelicula p{
+  margin-left: 10%;  
+  margin-right: 10%;
+    color: black;
+    
 }
 .general {
-    background-color: rgb(228, 226, 230);
+    background-color: rgb(#ffffff);
 }
-
+.trailerPelicula {
+  padding: 30px;
+}
 .sedeButton {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
-.horarioSede {
-  display: flex;
-}
-
-.horarioSede button {
-  margin-right: 10px;
-  font-size: 16px;
-}
-.contenedorHorarios {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contenedorHorarios div {
-  width: 600px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-.primerasede{
-  background-color: rgb(255, 255, 255);
-  padding-bottom: 10px;
-  border-bottom: 5px solid red;
-}
-
-
-
-.primerasede h3{
-  margin-left: 20px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.primerasede ul{
-  margin-left: 5px;
-  padding-left: 10px;
-}
-
-.primerasede ul button {
-  background-color: red;
-  color: white;
-  border: 5px solid red;
-  border-radius: 5px;
-  margin-left: 10px;
-  
-}
-
-.primerasede ul button:hover {
-  background-color: white;
-  color: red;
-  border: 5px solid white;
-}
-
-
-
-
-.segundasede{
-  background-color: rgb(255, 255, 255);
-  padding-bottom: 10px;
-  border-bottom: 5px solid red;
-}
-
-.segundasede h3{
-  margin-left: 20px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.segundasede ul{
-  margin-left: 5px;
-  padding-left: 10px;
-}
-
-.segundasede ul button {
-  background-color: red;
-  color: white;
-  border: 5px solid red;
-  border-radius: 5px;
-  margin-left: 10px;
-  
-}
-
-.segundasede ul button:hover {
-  background-color: white;
-  color: red;
-  border: 5px solid white;
-}
-
-.horarioContenedor {
-  
-  width: 100%;
-  height: 500px;
+.horarios h2{
   display: flex;
   justify-content: center;
-  border-bottom: 3px solid #ff0000;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.horarioContenido{
+  margin: 20px;
+  padding-top: 30px;
+  padding-left: 40vh;
+  padding-right: 40vh;
+}
+
+
+.contenidoConTrailer {
+  -webkit-box-shadow: 23px -23px 0px -12px rgba(255,0,0,1);
+-moz-box-shadow: 23px -23px 0px -12px rgba(255,0,0,1);
+box-shadow: 23px -23px 0px -12px rgba(255,0,0,1);
+
+}
+
+
+.textoHorario {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.horariosStyle{
+  margin-left: 20%;
+  margin-right: 20%;
+  max-width: 60%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  
 }

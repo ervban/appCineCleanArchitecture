@@ -1,13 +1,14 @@
 .texto {
   position: relative;
   text-align: center;
-  margin-top: 15%;
   color: white;
+  width: 100%;
+  height: 100%;
 }
 
 .textoCentral {
-  position: relative; /* Cambiado a relativo para que se base en su posición actual, que ya está centrada por .texto */
-  text-align: center;
+  position: relative; 
+  height: 70vh;
   color: white;
 }
 
@@ -18,10 +19,60 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .texto h3,
 .textoCentral h3 {
   margin-top: 20px;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imgCarrousell1 {
+  width: 100%;
+  height: 100%;
+  background: center / cover no-repeat url("https://flim-1-0-2.s3.eu-central-1.amazonaws.com/thumbs/hd_720px/554564d5258e11eea4830612238522d6.jpeg");
+ 
+}
+.textoReferencial{
+  margin-top: 18vh;
+}
+
+
+.imgCarrousell2 {
+  width: 100%;
+  height: 100%;
+  background: center / cover no-repeat url("https://i0.wp.com/img.screencaps.us/202/4k-1-dune/full/4kdune-movie-screencaps.com-167.jpg?ssl=1");
+}
+.imgCarrousell3 {
+  width: 100%;
+  height: 100%;
+  background: center / cover no-repeat url("https://assets-prd.ignimgs.com/2022/08/02/lord-of-the-rings-thumbnail-1659474646743.jpg");
+}
+.imgCarrousell4 {
+  width: 100%;
+  height: 100%;
+  background: center / cover no-repeat url("https://psicofilmia.wordpress.com/wp-content/uploads/2015/02/whiplash5.jpg?w=549");
 }

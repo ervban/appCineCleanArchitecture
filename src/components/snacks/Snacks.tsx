@@ -4,6 +4,7 @@ import Footer from "../../common/Footer/Footer";
 import "./snacks.css";
 import CartSnack from "./CartSnack";
 import { getAllConfiteria } from "../../services/snack.service";
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Snacks() {
   const [snacks, setSnacks] = useState<any[]>([]);
@@ -27,7 +28,7 @@ export default function Snacks() {
         {snacks.length > 0 ? (
           snacks.map((snack) => <CartSnack key={snack.id} snack={snack} />)
         ) : (
-          <p>Cargando snacks...</p>
+          <CircularProgress color="inherit" />
         )}
       </div>
       <Footer />

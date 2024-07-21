@@ -16,7 +16,7 @@ export const getPeliculaById = async (id: number) => {
 export const getAllPeliculas = async () => {
     try {
         const response = await axios.get(`${BASE_URL}/listar`);
-        console.log("Todas las películas:", response.data);
+     
         return response.data;
     } catch (error) {
         console.error("Error al obtener todas las películas:", error);

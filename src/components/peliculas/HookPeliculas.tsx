@@ -32,7 +32,7 @@ export default function HookPeliculas() {
 
   return (
     <div>
-      {/* Renderizar las películas aquí */}
+
     </div>
   );
 }

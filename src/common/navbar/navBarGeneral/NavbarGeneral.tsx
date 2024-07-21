@@ -32,7 +32,7 @@ export default function NavbarGeneral() {
             <button className="btn">Sedes</button>
           </Link>
           <Link to="/nosotros">
-            <button className="btn">Sobre Nosotros</button>
+            <button className="btn">Nosotros</button>
           </Link>
           <Link to="/snacks">
             <button className="btn">Dulcería</button>

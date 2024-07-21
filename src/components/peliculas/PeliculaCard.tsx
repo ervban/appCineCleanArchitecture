@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { Movie } from "./PelculaInterface";
 // Definir la interfaz para las propiedades del componente
-export interface Movie {
-  id: string;
-  imagen: string;
-  nombre: string;
-  descripcion: string;
-  trailer: string;
-}
+
 
 interface PeliculaCardProps {
   movie: Movie;
@@ -16,8 +10,6 @@ interface PeliculaCardProps {
 
 export const PeliculaCard: React.FC<PeliculaCardProps> = ({ movie }) => {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
-  // Si no usas el estado movies, deberías considerar removerlo
-  const [movies, setMovies] = useState<Movie[]>([]); // Asumiendo que quieres mantener este estado por alguna razón
 
   return (
     <div
@@ -28,9 +20,9 @@ export const PeliculaCard: React.FC<PeliculaCardProps> = ({ movie }) => {
     >
       <img src={movie.imagen} alt={movie.nombre} />
       {hoveredImage === movie.imagen && (
-        <Link to={{ pathname: "/horario" }} onClick={() => localStorage.setItem("selectedMovie", JSON.stringify(movie))}>
-          <button className="buy-ticket-button">Comprar entrada</button>
-        </Link>
+        <Link to={`/horario/${movie.id}`} >
+        <button className="buy-ticket-button">Comprar entrada</button>
+      </Link>
       )}
     </div>
   );
