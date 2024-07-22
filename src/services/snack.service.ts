@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:9070/api/confiteria';
+const BASE_URL = 'http://localhost:8080/api/confiteria';
 
 export const getConfiteriaById = async (id: number) => {
     try {
