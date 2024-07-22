@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:9090/api/cartelera';
+const BASE_URL = 'http://localhost:8080/api/cartelera';
 
 export const getCarteleraById = async (id: number) => {
     try {

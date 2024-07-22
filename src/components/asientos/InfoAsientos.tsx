@@ -15,8 +15,6 @@ interface MovieGroupedBySede {
   [key: string]: { horarios: { horario: string; carteleraId: number; sala: string }[]; nombre: string };
 }
 
-
-
 export default function InfoAsientos({ movieId, id_pelicula, selectedSeats }: InformacionAsientosProps & { selectedSeats: string[] }): JSX.Element {
   const [movie, setMovie] = useState<Movie | null>(null);
   const [cartelera, setCartelera] = useState<Cartelera>();
@@ -59,8 +57,6 @@ export default function InfoAsientos({ movieId, id_pelicula, selectedSeats }: In
         setCargando(false);
       });
   }, [movieId, id_pelicula]);
-
-
 
   return (
     <div className="parteIzquierda">

@@ -8,18 +8,20 @@ import { Cartelera } from '../horarios/types';
 type InformacionPagoProps = {
   movieId: number;
   id_pelicula: number;
+  selectedSeats: string[];
 };
 
 interface MovieGroupedBySede {
   [key: string]: { horarios: { horario: string; carteleraId: number; sala: string }[]; nombre: string };
 }
 
-export default function InformacionPago({ movieId, id_pelicula }: InformacionPagoProps) {
+export default function InformacionPago({ movieId, id_pelicula, selectedSeats }: InformacionPagoProps) {
   const [movie, setMovie] = useState<Movie | null>(null);
   const [cartelera, setCartelera] = useState<Cartelera | null>(null);
   const [cargando, setCargando] = useState<boolean>(true);
   const [movieData, setMovieData] = useState<MovieGroupedBySede>({});
   const [error, setError] = useState<string | null>(null);
+  const montoPagar = selectedSeats.length * 10;
 
   useEffect(() => {
     if (movieId) {
@@ -57,6 +59,8 @@ export default function InformacionPago({ movieId, id_pelicula }: InformacionPag
   }, [movieId]);
 
   const currentDate = new Date().toLocaleDateString();
+  const selectedSeatNumbers = selectedSeats.map(seat => seat.replace(/[^\d]/g, ''));
+
   return (
     <>
       {movie && cartelera && (
@@ -70,10 +74,12 @@ export default function InformacionPago({ movieId, id_pelicula }: InformacionPag
           </Typography>
           <Typography variant="body1">Horario: {cartelera.horario}</Typography>
           <Typography variant="body1">Sala: {cartelera.sala}</Typography>
-          <Typography variant="body1">Asiento: {cartelera.selectedSeats?.length ? cartelera.selectedSeats.join(' - ') : '0'}</Typography>
+          <Typography variant="body1">Asientos: {selectedSeats.length ? selectedSeats.join(' - ') : '0'}</Typography>
+          <Typography variant="body1">Monto: S/.{montoPagar}</Typography>
           <Typography variant="body1">Fecha: {currentDate}</Typography>
         </Box>
       )}
     </>
   );
 }
+

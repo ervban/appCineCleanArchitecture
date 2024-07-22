@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8090/api/peliculas';
+const BASE_URL = 'http://localhost:8080/api/peliculas';
 
 export const getPeliculaById = async (id: number) => {
     try {
